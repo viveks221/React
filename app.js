@@ -1,43 +1,17 @@
 import React from "react";
-import  ReactDOM  from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
-// Manipulate the HTML DOM using Javscript
-// const heading = document.createElement("h1");
-// heading.innerHTML = "Namaste Everyone";
-// const root = document.getElementById("root");
-// root.appendChild(heading);
-
-// Manipulate the HTML DOM using React
-
-// Create nested React Elements
-const heading = React.createElement(
-    "h1",
-    {
-      id: "title",
-      style: {
-        background:"red",
-      },
-      className:"title"
-    },
-    "heading"
-  );
-  const heading1 = React.createElement(
-    "h1",
-    {
-      id: "title",
-    },
-    "heading1"
-  );
-  
-  const container = React.createElement(
-    "div",
-    {
-      id: "container",
-    },
-    [heading, heading1]
-  );
-  
-  // create root using createRoot
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  // passing react element inside root
-  root.render(container);
+const counter = 67676;
+const Title = (a) => <h1>Namatey React</h1>;
+const HeadingComponent = (a) => (
+  <div id="test">
+    <Title />
+    <Title></Title>
+    {Title()}
+    {console.log(1000)}
+    {counter}
+    <h1> Functional component test</h1>
+  </div>
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent></HeadingComponent>);
